@@ -49,7 +49,7 @@ chmod +s /system/etc/init/init.sud.rc
 reboot
 ```
 
-Note for less than Android 12 - there is `/system` mount. So replace the above mount with `mount -o remount,rw /system`
+Note for less than Android 12 - there is `/system` mount. So replace the / mount with `mount -o remount,rw /system`
 
 ## License
 
