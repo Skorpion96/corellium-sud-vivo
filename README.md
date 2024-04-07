@@ -12,14 +12,14 @@ Building should be rather simple, simply create a `Makefile.local` file to prope
 diff@larry:../sud/ $ make
 ~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/daemon.o src/daemon.c -c -O2 -Wall -Wextra -I./include/ 
 ~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/pts.o src/pts.c -c -O2 -Wall -Wextra -I./include/ 
-~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/su.o src/su.c -c -O2 -Wall -Wextra -I./include/ 
-~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o bin/su src/daemon.o src/pts.o src/su.o -llog 
+~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/suu.o src/suu.c -c -O2 -Wall -Wextra -I./include/ 
+~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o bin/suu src/daemon.o src/pts.o src/suu.o -llog 
 diff@larry:../sud/ $ ls -l bin 
 total 44
 -rwxrwxr-x 1 diff diff 41416 Jan 21 13:31 su
 ```
 
-Alternatively, check the releases tab for a precompiled `su` binary.
+Alternatively, check the releases tab for a precompiled `suu` binary.
 
 ### Installing on Corellium Android Devices
 
