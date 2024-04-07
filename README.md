@@ -26,11 +26,6 @@ Alternatively, check the releases tab for a precompiled `suu` binary.
 Build the binaries in this repository following the directions in the `Build` section. Then on
 the local machines connect to the device via `adb` and push the following files;
 
-```
-adb push init.sud.rc /data/local/tmp/
-adb push bin/su /data/local/tmp/
-```
-
 Then get a `shell`, via `adb` and run the following commands;
 
 ```
