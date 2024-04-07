@@ -34,22 +34,22 @@ adb push bin/su /data/local/tmp/
 Then get a `shell`, via `adb` and run the following commands;
 
 ```
-su
-/system/bin/mount -orw,remount /system
-/vendor/bin/cp /data/local/tmp/su /system/xbin/su
-/vendor/bin/chown root /system/xbin/su
-/system/bin/chcon u:object_r:su_exec:s0 /system/xbin/su
-/vendor/bin/chmod 06755 /system/xbin/su
-
-/vendor/bin/cp /data/local/tmp/init.sud.rc /system/etc/init/init.sud.rc
-/vendor/bin/chown root /system/etc/init/init.sud.rc
-/system/bin/chcon u:object_r:system_file:s0 /system/etc/init/init.sud.rc
-/vendor/bin/chmod 644 /system/etc/init/init.sud.rc
-
-/system/bin/reboot
+adb shell
+mount -o remount,rw /
+exit
+adb push suu-arm64 /system/xbin/suu
+adb push init.sud.rc /system/etc/init/init.sud.rc
+adb shell
+chown root /system/xbin/suu
+chmod 777 /system/xbin/suu
+chmod +s /system/xbin/suu
+chown root /system/etc/init/init.sud.rc
+chmod 777 /system/etc/init/init.sud.rc
+chmod +s /system/etc/init/init.sud.rc
+reboot
 ```
 
-Note for Android 12 - there is no `/system` mount, so you will need to remount the root mount `/` instead. So replace the above mount with `/system/bin/mount -orw,remount /`
+Note for less than Android 12 - there is `/system` mount. So replace the above mount with `mount -o remount,rw /system`
 
 ## License
 
