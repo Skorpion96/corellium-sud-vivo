@@ -38,9 +38,11 @@ adb shell
 chown root /system/xbin/suu
 chmod 777 /system/xbin/suu
 chmod +s /system/xbin/suu
+chcon u:object_r:system_file:s0 /system/xbin/suu
 chown root /system/etc/init/init.sud.rc
 chmod 777 /system/etc/init/init.sud.rc
 chmod +s /system/etc/init/init.sud.rc
+chcon u:object_r:system_file:s0 /system/etc/init/init.sud.rc
 reboot
 ```
 
