@@ -16,7 +16,7 @@ diff@larry:../sud/ $ make
 ~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o bin/suu src/daemon.o src/pts.o src/suu.o -llog 
 diff@larry:../sud/ $ ls -l bin 
 total 44
--rwxrwxr-x 1 diff diff 41416 Jan 21 13:31 su
+-rwxrwxr-x 1 diff diff 41416 Jan 21 13:31 suu
 ```
 
 Alternatively, check the releases tab for a precompiled `suu` binary.
