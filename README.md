@@ -12,7 +12,7 @@ Building should be rather simple, simply create a `Makefile.local` file to prope
 diff@larry:../sud/ $ make
 ~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/daemon.o src/daemon.c -c -O2 -Wall -Wextra -I./include/ 
 ~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/pts.o src/pts.c -c -O2 -Wall -Wextra -I./include/ 
-~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/suu.o src/suu.c -c -O2 -Wall -Wextra -I./include/ 
+~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o src/suu.o src/su.c -c -O2 -Wall -Wextra -I./include/ 
 ~/Android/Sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang -o bin/suu src/daemon.o src/pts.o src/suu.o -llog 
 diff@larry:../sud/ $ ls -l bin 
 total 44
